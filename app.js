@@ -1,6 +1,7 @@
 'use strict';
 
-const GET_URL = 'https://jsonplaceholder.typicode.com/posts?_limit=5';
+const GET_URL = 'https://jsonplaceholder.typicode.com/posts?_limit=5'; //true url LOWER false usl
+//const GET_URL = 'https://jsonplaceholder1.typicode.com/posts?_limit=5';
 const POST_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 const loadButton = document.querySelector('#load-button');
