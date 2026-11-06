@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Доска публикаций</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">Лабораторная работа № 3</p>
+      <h1>Доска публикаций</h1>
+      <p>Асинхронный JavaScript и REST API</p>
+    </header>
+    <section class="panel" aria-labelledby="posts-heading">
+      <div class="section-header">
+        <h2 id="posts-heading">Публикации</h2>
+        <button id="load-button" type="button">Загрузить публикации</button>
+      </div>
+      <p id="load-message" class="message" role="status" aria-live="polite"></p>
+      <div id="posts" class="posts" aria-busy="false">
+        <p class="hint">Нажмите кнопку, чтобы загрузить 5 публикаций.</p>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="create-heading">
+      <h2 id="create-heading">Новая публикация</h2>
+      <form id="post-form" novalidate>
+        <label for="title">Заголовок</label>
+        <input id="title" name="title" type="text" required aria-describedby="create-message">
+        <label for="body">Текст</label>
+        <textarea id="body" name="body" rows="5" required aria-describedby="create-message"></textarea>
+        <button id="create-button" type="submit">Создать публикацию</button>
+      </form>
+      <p id="create-message" class="message" role="status" aria-live="polite"></p>
+      <div id="created-post" aria-live="polite"></div>
+      <p class="hint">JSONPlaceholder имитирует создание: новые записи не сохраняются на сервере постоянно.</p>
+    </section>
+  </main>
+</body>
+</html>

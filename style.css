@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+:root { font-family: system-ui, sans-serif; color: #1e293b; background: #f0f4fa; }
+body { margin: 0; line-height: 1.6; }
+.container { width: min(920px, 100% - 32px); margin: 40px auto; }
+header { margin-bottom: 28px; }
+h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.2; }
+h2 { margin: 0 0 16px; font-size: 23px; }
+header p { color: #526178; }
+.eyebrow { color: #245dc1; font-weight: 700; letter-spacing: .06em; }
+.panel { background: white; padding: 28px; border: 1px solid #dce3ef; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 6px 24px #17255408; }
+.section-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.section-header h2 { margin: 0; }
+button { border: 0; border-radius: 8px; padding: 12px 18px; background: #245dc1; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+button:hover:not(:disabled) { background: #184591; }
+button:disabled { opacity: .6; cursor: wait; }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #6a9cf1; outline-offset: 3px; }
+form { display: grid; gap: 10px; }
+label { font-weight: 600; }
+input, textarea { width: 100%; border: 1px solid #a9b6c8; padding: 12px; border-radius: 8px; font: inherit; }
+textarea { resize: vertical; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b42318; }
+form button { justify-self: start; margin-top: 8px; }
+.message { margin: 16px 0; }
+.message:empty { display: none; }
+.message.error { color: #b42318; }
+.message.success { color: #146c43; }
+.message.loading, .hint { color: #526178; }
+.post { border: 1px solid #dce3ef; background: #f8faff; border-radius: 10px; padding: 18px; margin-top: 16px; overflow-wrap: anywhere; }
+.post h3 { margin: 0 0 8px; font-size: 18px; }
+.post p { margin: 8px 0 0; white-space: pre-wrap; }
+.post .post-id { color: #526178; font-size: 14px; }
+.hint { font-size: 14px; }
+@media (max-width: 540px) { .container { margin: 24px auto; } .panel { padding: 20px; } button, form button { width: 100%; } }
